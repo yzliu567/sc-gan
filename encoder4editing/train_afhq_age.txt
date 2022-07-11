@@ -1,0 +1,20 @@
+CUDA_VISIBLE_DEVICES=3 python scripts/train.py \
+--dataset_type afhqcat_encode \
+--exp_dir exps/afhq_age \
+--start_from_latent_avg \
+--use_w_pool \
+--w_discriminator_lambda 0.1 \
+--progressive_start 20000 \
+--id_lambda 0.5 \
+--val_interval 10000 \
+--max_steps 250000 \
+--stylegan_size 512 \
+--stylegan_weights PATH_TO_FINETUNED_CKPT_ON_AFHQCAT_POSE \
+--pretrained_ckpt_path PATH_TO_PRETRAINED_E4E_AFHQCAT_CKPT \
+--workers 8 \
+--batch_size 4 \
+--test_batch_size 4 \
+--test_workers 4 \
+--save_training_data \
+--mmd \
+--modes 7

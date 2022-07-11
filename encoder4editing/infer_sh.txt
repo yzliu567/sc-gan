@@ -1,0 +1,12 @@
+python scripts/inference.py \
+--images_dir=PATH_TO_IMAGES_FOLDER \
+--save_dir=PATH_TO_RESULTS \
+PATH_TO_E4E_MODEL \
+--ganpath=PATH_TO_FINETUNED_STYLEGAN2_MODEL
+
+CUDA_VISIBLE_DEVICES=9 python scripts/inference.py \
+--images_dir=PATH_TO_IMAGES_FOLDER \
+--save_dir=PATH_TO_RESULTS \
+PATH_TO_E4E_MODEL \
+--n_sample=1000 \
+--ganpath=PATH_TO_FINETUNED_STYLEGAN2_MODEL
